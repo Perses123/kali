@@ -1,2 +1,19 @@
-chmod +x kali_setup.sh
-sudo ./kali_setup.sh
+sudo useradd osiris
+sudo usermod -aG sudo osiris
+Change ROOT PASSWD
+chsh -s /bin/bash osiris
+sudo apt update && sudo apt upgrade -y && sudo autoremove -y
+sudo apt install tilix git tor torbrowser-launcher -y
+git clone https://github.com/thelinuxchoice/blackeye
+cd blackeye
+bash blackeye.sh
+git clone https://github.com/githacktools/TorghostNG 
+cd TorghostNG  
+sudo python3 install.py 
+sudo torghostng --start
+sudo torghostng --stop 
+nano ~/.bash_aliases
+>
+alias hackwifi='besside-ng wlan0'
+alias upup='apt update && apt upgrade -y'
+   
