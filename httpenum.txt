@@ -1,0 +1,10 @@
+nikto -h 192.168.1.1	Perform a nikto scan against target
+dirbuster	Configure via GUI, CLI input doesn’t work most of the time
+gobuster dir -u http://192.168.1.1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt	Directory brute forcing with gobuster
+wpscan --url http://192.168.1.1	WordPress vulnerability scanner
+joomscan -u http://192.168.1.1	Joomla vulnerability scanner
+uniscan -u http://192.168.1.1 -qweds	Uniscan automated vulnerability scanner
+curl -I http://192.168.1.1	Fetch HTTP headers using curl
+nmap -p80 --script http-enum 192.168.1.1	Nmap script for HTTP enumeration
+whatweb http://192.168.1.1	Identify technologies used on the website
+wfuzz -c -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://192.168.1.1/FUZZ

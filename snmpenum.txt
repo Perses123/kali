@@ -1,0 +1,5 @@
+snmpcheck -t 192.168.1.X -c public
+snmpwalk -c public -v1 192.168.1.X 1
+snmpenum -t 192.168.1.X
+onesixtyone -c names -i hosts
+snmpbulkwalk -v2c -c public -Cn0 -Cr10 192.168.1.X
